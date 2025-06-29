@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".WorkoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Workout Input Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log New Workout"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Body Part Spinner -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Body Part"
+            android:layout_marginBottom="4dp"/>
+
+        <Spinner
+            android:id="@+id/bodypartSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Exercise Spinner -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exercise"
+            android:layout_marginBottom="4dp"/>
+
+        <Spinner
+            android:id="@+id/exerciseSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Weight Input -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight (kg)"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/weightEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Reps Input -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reps"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/repsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Sets Input -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sets"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/setsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/saveWorkoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Workout"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="24dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Workout History"
+            android:textColor="@color/dark_grey"
+            android:background="@color/very_light_grey"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TableLayout
+            android:id="@+id/tableHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:background="@color/light_grey">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Exercise"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Reps"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Sets"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Weight"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Workout Table -->
+        <TableLayout
+            android:id="@+id/workoutTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"/>
+
+        <!-- Clear All Button -->
+        <Button
+            android:id="@+id/clearAllButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Clear All Workouts"
+            android:textColor="@android:color/white" />
+
+        <!-- Home Button -->
+        <Button
+            android:id="@+id/returnHomeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Return to Home"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
